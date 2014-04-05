@@ -1,6 +1,10 @@
-Bookingsystem::Application.routes.draw do
-  resources :tickets
-
+Mebay::Application.routes.draw do
+  resources :ads do
+    get '/ads/', :controller=>'ads', :action=>'index'
+    get '/ads/:id', :controller=>'ads', :action=>'show'
+    get ':controller/:action/:id'
+    get ':controller/:action/:id.:format'
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

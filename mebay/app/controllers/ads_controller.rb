@@ -4,8 +4,9 @@ class AdsController < ApplicationController
   end
 
   def create
-    @ad =Ad.new(params[:ad])
+    @ad =Ad.new(ad_params)
     @ad.save
+
   end
 
 
@@ -18,7 +19,11 @@ class AdsController < ApplicationController
   @ads = Ad.find(:all)
   end
 
+  private
 
+    def ad_params
+      params.require(:ad).permit(:name, :description, :price, :seller_id, :email, :img_url)
+    end
 
 end
 

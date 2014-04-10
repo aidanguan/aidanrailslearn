@@ -1,6 +1,8 @@
 <html>
 <head>
   <title> Ads: This is a Rails Project </title>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tag %>
 </head>
 <body>
   <div id ="wrapper">
@@ -9,8 +11,13 @@
         <h1> Project Mebay</h1>
         <ul id ="nav">
           <li><a href="/ads/">All Ads</a></li>
+          <li><%= link_to 'new', new_ad_path %></li>
         </ul>
       </div>
+      <%= form_tag "/ads/find", :method=>"get" do %>
+        <%= text_field_tag :search_string %>
+        <%= submit_tag "Search" %>
+      <% end %>
     </div>
 
     <div id = "content">

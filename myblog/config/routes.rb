@@ -1,19 +1,4 @@
-Mebay::Application.routes.draw do
-  resources :ads do
-    #get '/ads/new', :controller=>'ads', :action=>'new'
-    #post '/ads/create', :controller=>'ads', :action=>'create'
-    #get '/ads/', :controller=>'ads', :action=>'index'
-    #get '/ads/:id', :controller=>'ads', :action=>'show'
-    #get ':controller/:action/:id'
-    #get ':controller/:action/:id.:format'
-    #get '/ads/:id/delete', controller=>'ads', :action=>'destroy'
-    collection do
-      get 'find'
-    end
-
-  end
-
-  root 'ads#index'
+Myblog::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -54,6 +39,11 @@ Mebay::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
+  resources :welcome do
+    get 'index'
+  end
+
+  root 'welcome#index'
 
   # Example resource route with concerns:
   #   concern :toggleable do

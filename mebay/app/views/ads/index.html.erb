@@ -1,7 +1,9 @@
 <b>index</b>
 <ul>
-<% for ad in @ads %>
-    <li><a href="/ads/<%= ad.id %>"><%= ad.name %></a></li>
+  <% for ad in @ads %>
+    <li><a href="/ads/<%= ad.id %>"><%= ad.name %></a>
+    <%= link_to 'Edit', edit_ad_path(ad) %>
+    <%= link_to 'Destroy', ad, method: :delete, data: { confirm: 'Are you sure?' } %></li>
   <% end %>
 </ul>
 

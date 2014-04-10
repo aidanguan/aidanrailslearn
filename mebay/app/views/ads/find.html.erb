@@ -1,0 +1,25 @@
+<h1> List of Search Result </h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Seller ID</th>
+    <th>Email</th>
+    <th>IMG_URL</th>
+  </tr>
+  <% for ad in @ads %>
+  <tr>
+    <td><%= ad.name %></td>
+    <td><%= ad.description %></td>
+    <td><%= ad.price %></td>
+    <td><%= ad.seller_id %></td>
+    <td><%= ad.email %></td>
+    <td><%= ad.img_url %></td>
+    <td><%= link_to 'Edit', edit_ad_path(ad) %></td>
+    <td><%= link_to 'Destroy', ad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+
+  <% end %>
+</table>

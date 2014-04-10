@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  departure: 2014-04-10 13:14:40
+  arrival: MyString
+  datetime: MyString
+  destination: MyString
+  baggage_allowance: 9.99
+  capacity: 1
+
+two:
+  departure: 2014-04-10 13:14:40
+  arrival: MyString
+  datetime: MyString
+  destination: MyString
+  baggage_allowance: 9.99
+  capacity: 1

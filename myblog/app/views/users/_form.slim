@@ -1,4 +1,5 @@
 = form_for @user do |f|
+  = @user.errors.messages
   .field
     = f.label :name, 'name'
     = f.text_field :name

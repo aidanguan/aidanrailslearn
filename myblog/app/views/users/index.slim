@@ -13,5 +13,6 @@ h1 用户列表
           tr
             td = user.name
             td = user.role
-            /td = link_to '编辑', edit_user_path， :mothed=>'get'
+            td
+              = link_to '查看', user_path(user)
     end

@@ -1,0 +1,22 @@
+h1 查看详情
+
+p
+  b 姓名:
+  = @user.name
+p
+  b eMail:
+  = @user.email
+p
+  b 头像:
+  = @user.avatar
+
+p
+  b 角色
+  = @user.role
+
+= link_to ' 编辑 ', edit_user_path
+= link_to ' 删除 ', user_path, method: :delete, data: {confirm: '你确认么？'}
+= link_to ' 返回 ', users_path
+
+
+

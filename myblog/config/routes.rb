@@ -44,8 +44,12 @@ Myblog::Application.routes.draw do
   end
 
   resources :users do
+    collection do
+      get 'find'
+    end
+
   end
-  
+
 
   root 'welcome#index'
 

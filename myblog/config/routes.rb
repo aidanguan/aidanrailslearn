@@ -43,6 +43,10 @@ Myblog::Application.routes.draw do
     get 'index'
   end
 
+  resources :users do
+  end
+  
+
   root 'welcome#index'
 
   # Example resource route with concerns:

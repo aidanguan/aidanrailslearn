@@ -1,0 +1,17 @@
+h1 用户列表
+.nav
+  = link_to '创建用户', new_user_path
+
+.wrap
+  .form
+    table
+      thead
+        th 用户名
+        th 角色
+      tbody
+        - for user in @users
+          tr
+            td = user.name
+            td = user.role
+            /td = link_to '编辑', edit_user_path， :mothed=>'get'
+    end

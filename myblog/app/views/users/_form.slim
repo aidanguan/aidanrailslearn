@@ -1,0 +1,21 @@
+= form_for @user do |f|
+  .field
+    = f.label :name, 'name'
+    = f.text_field :name
+  .field
+    = f.label :email, 'eMail'
+    = f.text_field :email
+  .field
+    = f.label :avatar, 'Avatar'
+    = f.text_field :avatar
+  .field
+    = f.label :password, 'password'
+    = f.text_field :password
+  .field
+    = f.radio_button :role, 'admin'
+    = f.label :role_admin, 'Admin'
+    = f.radio_button :role, 'Pitizen'
+    = f.label :role_pitizen, 'Pitizen'
+  .action
+    = f.submit 'submit'
+end

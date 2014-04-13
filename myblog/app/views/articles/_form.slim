@@ -1,0 +1,28 @@
+= form_for @article do |f|
+  =@article.errors.messages
+
+  .field
+    p
+      = f.label :title, '标题'
+    p
+      = f.text_field :title
+
+  .field
+    p
+    = f.label :description, '简介'
+    p
+    = f.text_area :description
+
+  .field
+    p
+    = f.label :content, '正文'
+    p
+    = f.text_area :content
+
+  .action
+    = f.submit '提交'
+
+
+
+
+end

@@ -43,10 +43,16 @@ Myblog::Application.routes.draw do
     get 'index'
   end
 
+  resources :articles do
+  end
+
   resources :users do
     collection do
       get 'find'
     end
+
+
+
 
   end
 

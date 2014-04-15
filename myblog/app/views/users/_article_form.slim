@@ -1,5 +1,7 @@
-= form_for @article do |f|
-  =@article.errors.messages
+= form_for article do |f|
+  =article.errors.messages
+
+  = f.hidden_field :user_id
 
   .field
     p
@@ -19,7 +21,7 @@
     p
     = f.text_area :content
 
-   .field
+  .field
     p
     = f.label :tag, '标签'
     p

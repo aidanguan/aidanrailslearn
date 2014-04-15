@@ -8,5 +8,8 @@ h1 Aidan的博客
       = article.content
     p
       = article.created_at
+    p
+      = article.user.name
+      = image_tag article.user.avatar, height:'20'
 
 

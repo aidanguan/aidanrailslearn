@@ -1,0 +1,13 @@
+//h1 =user.id '的博客'
+h1
+
+.list
+  - Article.where(:user_id=>@user.id).each do |article|
+    p
+      h2 = article.title
+    p
+      = article.content
+    p
+      = article.created_at
+
+

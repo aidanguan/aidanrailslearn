@@ -49,6 +49,7 @@ Myblog::Application.routes.draw do
   resources :users do
     collection do
       get 'find'
+      get 'login'
     end
 
 

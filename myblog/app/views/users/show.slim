@@ -14,6 +14,10 @@ p
   b 角色
   = @user.role
 
+
+
+= render :partial=>"article_list"
+= render :partial=>"article_form", :locals=>{:article=>Article.new(:user_id=>@user.id)}
 = link_to ' 编辑 ', edit_user_path
 = link_to ' 删除 ', user_path, method: :delete, data: {confirm: '你确认么？'}
 = link_to ' 返回 ', users_path

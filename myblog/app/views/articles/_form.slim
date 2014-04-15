@@ -1,6 +1,8 @@
 = form_for @article do |f|
   =@article.errors.messages
 
+
+
   .field
     p
       = f.label :title, '标题'
@@ -19,7 +21,7 @@
     p
     = f.text_area :content
 
-   .field
+  .field
     p
     = f.label :tag, '标签'
     p

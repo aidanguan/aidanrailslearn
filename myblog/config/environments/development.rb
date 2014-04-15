@@ -27,5 +27,7 @@ Myblog::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3001 }
+
   Paperclip.options[:command_path] = "/usr/local/bin/"
 end

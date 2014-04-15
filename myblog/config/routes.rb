@@ -1,4 +1,5 @@
 Myblog::Application.routes.draw do
+  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -39,6 +40,8 @@ Myblog::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
+  root 'articles#index'
+
   resources :welcome do
     get 'index'
   end
@@ -58,7 +61,7 @@ Myblog::Application.routes.draw do
   end
 
 
-  root 'welcome#index'
+
 
   # Example resource route with concerns:
   #   concern :toggleable do

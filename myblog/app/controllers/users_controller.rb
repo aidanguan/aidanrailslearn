@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
   def new
     @user = User.new
   end
@@ -13,7 +14,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.find(:all)
+    @users = User.all
   end
 
   def edit

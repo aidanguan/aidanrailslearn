@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class='user'>
 <% if user_signed_in? %>
 <%= current_user.email %>
 <%= link_to "logout", destroy_user_session_path %>
@@ -14,6 +15,7 @@
 <%= link_to "login", new_user_session_path %>
 <%= link_to "注册", new_user_registration_path %>
 <% end %>
+</div>
 
 <%= yield %>
 

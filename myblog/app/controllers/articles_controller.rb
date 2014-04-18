@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  #layout false
+
   def new
     @article = Article.new
   end
@@ -14,7 +16,9 @@ class ArticlesController < ApplicationController
   end
 
   def index
+
     @articles = Article.order("created_at desc")
+
   end
 
   def edit
@@ -34,6 +38,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    layout false
   end
 
   def destroy

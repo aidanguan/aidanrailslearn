@@ -1,13 +1,35 @@
 
-.index
-  img src='/images/index/index-btn.png'
+.list
+  .listcontent
+    -for article in @articles
+      p
+        = article.title
+
+.indexbtn
+  .btn
+    img src='/images/index/index-btn.png'
+
+
+.scrollbar
+  .prevpage
+    .btn
+      img src='/images/index/prev-btn.png'
+
+  .nextpage
+    .btn
+      img src='/images/index/next-btn.png'
 
 .wrap
-  - for article in @articles
-    .title
-      = article.title
-    .content
-      = article.content
+  .page-scroll
+    - for article in @articles
+      .page
+        .title
+          = article.title
+        .content
+          = article.content
+
+
+#mask
     /p
     /  = article.created_at
     /p

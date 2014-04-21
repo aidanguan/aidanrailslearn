@@ -2,7 +2,12 @@ h1 用户列表
 .nav
   = link_to '创建用户', new_user_path
 
-.wrap
+
+
+.container
+  .alist
+    / = render :partial=>"article_list", :locals=>{:article=>Article.where(:user_id=>@user.id)}
+    = render :partial=>"article_list", :locals=>{:articles=>@articles}
   .form
     table
       thead

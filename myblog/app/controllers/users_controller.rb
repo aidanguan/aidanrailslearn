@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
+  layout "admin_layout"
+
   def new
     @user = User.new
   end
@@ -15,6 +17,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    @articles = Article.order("created_at desc")
   end
 
   def edit

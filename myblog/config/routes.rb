@@ -40,7 +40,7 @@ Myblog::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  root 'articles#index'
+  root 'blogs#index'
 
   resources :welcome do
     get 'index'
@@ -54,11 +54,11 @@ Myblog::Application.routes.draw do
       get 'find'
       get 'login'
     end
-
-
-
-
   end
+
+  resources :blogs do
+  end
+
 
 
 

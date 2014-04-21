@@ -1,13 +1,22 @@
 //h1 =user.id '的博客'
 h1
 
-.list
-  - Article.where(:user_id=>@user.id).each do |article|
-    p
-      h2 = article.title
-    p
-      = article.content
-    p
-      = article.created_at
+.articlelist
+  table
+    thead
+      tr
+        th 标题
+        th 正文
+        th 创建日期
+        th 操作
+    tbody
+      - articles.each do |article|
+        tr
+          td =article.title
+          td =article.user.name
+          td =article.created_at
+          th = link_to "编辑", edit_article_path(article.id)
+
+
 
 

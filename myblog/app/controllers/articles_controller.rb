@@ -1,5 +1,8 @@
 class ArticlesController < ApplicationController
   #layout false
+  before_action :authenticate_user!
+  layout "admin_layout"
+
 
   def new
     @article = Article.new

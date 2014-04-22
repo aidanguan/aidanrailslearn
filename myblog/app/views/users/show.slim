@@ -1,26 +1,34 @@
-h1 查看详情
-
-p
-  b 姓名:
-  = @user.name
-p
-  b eMail:
-  = @user.email
-p
-  b 头像:
-  = image_tag @user.avatar, height:'64'
-
-p
-  b 角色
-  = @user.role
+.container
+  ol.breadcrumb
+      li
+        = link_to '首页','#'
+      li
+        = link_to '用户管理','#'
+      li.active
+        = link_to '用户详情','#'
 
 
+  p
+    b 姓名:
+    = @user.name
+  p
+    b eMail:
+    = @user.email
+  p
+    b 头像:
+    = image_tag @user.avatar, height:'64'
 
-= render :partial=>"article_list", :locals=>{:articles => @user.articles}
-= render :partial=>"article_form", :locals=>{:article=>Article.new(:user_id=>@user.id)}
-= link_to ' 编辑 ', edit_user_path
-= link_to ' 删除 ', user_path, method: :delete, data: {confirm: '你确认么？'}
-= link_to ' 返回 ', users_path
+  p
+    b 角色
+    = @user.role
+
+
+
+  = render :partial=>"article_list", :locals=>{:articles => @user.articles}
+  = render :partial=>"article_form", :locals=>{:article=>Article.new(:user_id=>@user.id)}
+  = link_to ' 编辑 ', edit_user_path
+  = link_to ' 删除 ', user_path, method: :delete, data: {confirm: '你确认么？'}
+  = link_to ' 返回 ', users_path
 
 
 
